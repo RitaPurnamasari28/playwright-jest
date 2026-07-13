@@ -1,0 +1,20 @@
+{
+  "name": "playwrigt-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "playwright": "^1.61.1"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "fs-extra": "^11.3.6"
+  }
+}
