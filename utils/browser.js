@@ -7,8 +7,7 @@ let page;
 async function launchBrowser() {
 
     browser = await chromium.launch({
-        headless: env.headless,
-        args: ['--start-maximized']
+        headless: env.headless
     });
 
     const context = await browser.newContext({
