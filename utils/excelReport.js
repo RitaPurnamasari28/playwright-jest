@@ -1,5 +1,8 @@
 const ExcelJS = require("exceljs");
 const fs = require("fs-extra");
+const REPORT_DIR = "./reports";
+
+await fs.ensureDir(REPORT_DIR);
 
 const RESULT_FILE = "./reports/results.json";
 
@@ -23,6 +26,7 @@ async function addResult(testCase, expectedResult, actualResult, status) {
 
 }
 async function createExcel() {
+    await fs.ensureDir("./reports");
 
     const workbook = new ExcelJS.Workbook();
 
