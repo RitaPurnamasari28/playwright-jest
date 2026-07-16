@@ -5,25 +5,16 @@ class AdminPage extends BasePage {
     super(page);
 
     this.addButton = "text=Add";
-    this.userRoleDropdown =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i";
-    //this.role = '[name="password"]';
-    this.statusDropdown =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div/div[2]/i";
-    //this.status = '[name="password"]';
+    this.userRoleDropdown = "(//div[@class='oxd-select-wrapper'])[1]";
+    this.statusDropdown = "(//div[@class='oxd-select-wrapper'])[2]";
     this.employeeName = '[placeholder="Type for hints..."]';
-    this.username =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input";
-    this.password =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]/input";
-    this.confirmPassword =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input";
+    this.username = "//div[contains(@class, 'oxd-input-group')][.//label[contains(., 'Username')]]//input";
+    this.password = "(//input[@type='password'])[1]";
+    this.confirmPassword = "(//input[@type='password'])[2]";
     this.saveButton = 'button[type="submit"]';
 
-    this.searchUsernameField =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input";
-    this.searchButton =
-      "xpath=/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]";
+    this.searchUsernameField = "//div[contains(@class, 'oxd-input-group')][.//label[contains(., 'Username')]]//input";
+    this.searchButton = 'button[type="submit"]';
 
     this.usernameResult = ".oxd-table-cell oxd-padding-cell";
   }

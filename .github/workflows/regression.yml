@@ -10,6 +10,8 @@ on:
 jobs:
   regression-test:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Makassar
 
     steps:
       - name: Checkout repository
@@ -35,3 +37,10 @@ jobs:
         with:
           name: automation-report
           path: reports/
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+        name: screenshots
+        path: screenshots/

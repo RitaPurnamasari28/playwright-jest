@@ -8,6 +8,7 @@ class DashboardPage extends BasePage {
 
         this.dashboard = 'text=Time at Work';
         this.adminMenu = "text=Admin";
+        this.pimMenu = "text=PIM";
     }
 
     async getDashboard() {
@@ -16,6 +17,10 @@ class DashboardPage extends BasePage {
 
     async clickAdmin() {
         await this.click(this.adminMenu);
+    }
+
+    async clickpim() {
+        await this.click(this.pimMenu);
     }
 
 }
