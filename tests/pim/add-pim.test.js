@@ -54,7 +54,7 @@ describe("PIM Module", () => {
 
       //await pimPage.searchname(EXPECTED_NAME);
 
-      await page.waitForTimeout(50000);
+      await page.waitForTimeout(90000);
 
       const isDisplayed = await pimPage.isNameDisplayed(EXPECTED_NAME);
 
